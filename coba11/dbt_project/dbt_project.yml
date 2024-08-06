@@ -1,0 +1,8 @@
+name: ecommerce_project
+version: 1.0.0
+profile: default
+
+models:
+  ecommerce_project:
+    example:
+      materialized: view
