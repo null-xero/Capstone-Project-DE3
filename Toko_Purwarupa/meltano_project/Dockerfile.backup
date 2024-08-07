@@ -6,6 +6,6 @@ RUN pip install meltano
 
 COPY . .
 
-RUN meltano install
+RUN apt-get update && apt-get -y install git && meltano install
 
 ENTRYPOINT ["meltano"]

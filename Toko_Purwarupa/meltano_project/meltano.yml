@@ -1,0 +1,60 @@
+version: 1
+project_id: 5a24687f-2e39-404d-b0a6-2e08f24b20d4
+default_environment: environment_meltano
+
+environments:
+- name: environment_meltano
+  config:
+    snowflake:
+      account: ${SNOWFLAKE_ACCOUNT}
+      user: ${SNOWFLAKE_USER}
+      password: ${SNOWFLAKE_PASSWORD}
+      database: ${SNOWFLAKE_DATABASE}
+      warehouse: ${SNOWFLAKE_WAREHOUSE}
+      role: ${SNOWFLAKE_ROLE}
+      schema: ${SNOWFLAKE_SCHEMA}
+plugins:
+  extractors:
+  - name: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      files:
+      - path: data/to/olist_sellers_dataset.csv
+        keys:
+        - id
+        entity: orders
+  - name: tap-smoke-test
+    variant: meltano
+    pip_url: git+https://github.com/meltano/tap-smoke-test.git
+    config:
+      streams:
+      - stream_name: animals
+        input_filename: 
+          https://raw.githubusercontent.com/meltano/tap-smoke-test/main/demo-data/animals-data.jsonl
+  loaders:
+  - name: target-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-target-postgres
+    config:
+      host: localhost
+      port: 5432
+      dbname: meltano_postgres_db
+      user: postgres
+  - name: target-snowflake
+    variant: meltanolabs
+    pip_url: meltanolabs-target-snowflake
+    config:
+      # account: MELTANO_ACCOUNT
+      # user: MELTANO_USER
+      # password: MELTANO_PASSWORD
+      database: MELTANO_DATABASE
+      warehouse: MELTANO_WAREHOUSE
+      role: MELTANO_ROLE
+      schema: MELTANO_SCHEMA
+      add_record_metadata: true
+      clean_up_batch_files: true
+      hard_delete: false
+      load_method: append-only
+      use_browser_authentication: false
+      validate_records: true

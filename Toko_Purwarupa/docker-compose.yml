@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ecommerce_db
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # meltano:
+  #   build: ./meltano_project
+  #   container_name: meltano
+  #   volumes:
+  #     - ./meltano_project:/project
+  #   depends_on:
+  #     - postgres
+
+  # dbt:
+  #   build: ./dbt_project
+  #   container_name: dbt
+  #   volumes:
+  #     - ./dbt_project:/project
+  #   depends_on:
+  #     - postgres
+
+  # astro:
+  #   build: ./astro_project
+  #   container_name: astro
+  #   volumes:
+  #     - ./astro_project/dags:/usr/local/airflow/dags
+  #     - ./dbt_project:/usr/local/airflow/include
+  #     - ./meltano_project:/usr/local/airflow/include
