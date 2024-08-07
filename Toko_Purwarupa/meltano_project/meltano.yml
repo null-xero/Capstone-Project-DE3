@@ -22,8 +22,8 @@ plugins:
       files:
       - path: data/olist_sellers_dataset.csv
         keys:
-        - id
-        entity: penjual
+        - seller_id
+        entity: sellers
   - name: tap-smoke-test
     variant: meltano
     pip_url: git+https://github.com/meltano/tap-smoke-test.git
