@@ -20,10 +20,10 @@ plugins:
     pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
     config:
       files:
-      - path: data/to/olist_sellers_dataset.csv
+      - path: data/olist_sellers_dataset.csv
         keys:
         - id
-        entity: orders
+        entity: penjual
   - name: tap-smoke-test
     variant: meltano
     pip_url: git+https://github.com/meltano/tap-smoke-test.git
