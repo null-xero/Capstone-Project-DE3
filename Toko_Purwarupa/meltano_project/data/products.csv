@@ -1,0 +1,134 @@
+product_id,product_category_name,product_name,product_description
+1,Electronics,UltraHD Smart TV,55-inch UltraHD Smart TV with built-in apps.
+2,Fashion,Elegant Evening Dress,"Stunning black evening dress, perfect for events."
+3,Home & Kitchen,Stainless Steel Blender,High-powered blender for smoothies and soups.
+4,Beauty,Organic Face Cream,Hydrating organic face cream for all skin types.
+5,Toys & Games,Remote Control Car,High-speed remote control car with LED lights.
+6,Sports & Outdoors,Yoga Mat,Non-slip yoga mat for all fitness levels.
+7,Books,Mystery Novel,"Gripping mystery novel, keeps you on the edge."
+8,Electronics,Wireless Earbuds,Noise-cancelling wireless earbuds with long battery life.
+9,Fashion,Casual Sneakers,Comfortable and stylish sneakers for daily wear.
+10,Home & Kitchen,Ceramic Coffee Mug,Large ceramic coffee mug with unique design.
+11,Beauty,Lipstick Set,Vibrant lipstick set in five different shades.
+12,Toys & Games,Puzzle Game,1000-piece puzzle game for all ages.
+13,Sports & Outdoors,Hiking Backpack,Durable hiking backpack with multiple compartments.
+14,Books,Sci-Fi Adventure,Exciting sci-fi adventure set in the future.
+15,Electronics,Smartwatch,Multi-functional smartwatch with fitness tracking.
+16,Fashion,Designer Handbag,Stylish designer handbag for all occasions.
+17,Home & Kitchen,Non-stick Frying Pan,"Premium non-stick frying pan, easy to clean."
+18,Beauty,Hair Care Set,"Complete hair care set for shiny, healthy hair."
+19,Toys & Games,Building Blocks,Creative building blocks for imaginative play.
+20,Sports & Outdoors,Running Shoes,Lightweight running shoes with excellent grip.
+21,Books,Historical Fiction,Immersive historical fiction set in medieval times.
+22,Electronics,Bluetooth Speaker,Portable Bluetooth speaker with deep bass.
+23,Fashion,Leather Jacket,Classic leather jacket with a modern twist.
+24,Home & Kitchen,Electric Kettle,Fast-boiling electric kettle with auto shut-off.
+25,Beauty,Nail Polish Kit,Nail polish kit with various vibrant colors.
+26,Toys & Games,Action Figure Set,Collectible action figure set with accessories.
+27,Sports & Outdoors,Water Bottle,Insulated water bottle keeps drinks cold/hot.
+28,Books,Fantasy Epic,Epic fantasy novel with captivating characters.
+29,Electronics,Laptop Stand,Ergonomic laptop stand with adjustable height.
+30,Fashion,Summer Hat,Trendy summer hat with wide brim for sun protection.
+31,Home & Kitchen,Air Fryer,Healthy cooking air fryer with multiple settings.
+32,Beauty,Perfume,Long-lasting perfume with a floral scent.
+33,Toys & Games,Board Game,Fun board game for the whole family.
+34,Sports & Outdoors,Dumbbell Set,Adjustable dumbbell set for home workouts.
+35,Books,Self-Help Guide,Motivational self-help guide for personal growth.
+36,Electronics,Digital Camera,High-resolution digital camera with zoom lens.
+37,Fashion,Winter Scarf,Cozy winter scarf in various colors.
+38,Home & Kitchen,Pressure Cooker,Multi-functional pressure cooker for fast meals.
+39,Beauty,Makeup Brush Set,Professional makeup brush set with 12 pieces.
+40,Toys & Games,Dollhouse,Beautifully detailed dollhouse with furniture.
+41,Sports & Outdoors,Treadmill,Compact treadmill with various speed settings.
+42,Books,CookBook,Cookbook with easy and delicious recipes.
+43,Electronics,Gaming Headset,High-quality gaming headset with surround sound.
+44,Fashion,Denim Jeans,Stylish denim jeans with a perfect fit.
+45,Home & Kitchen,Robot Vacuum,Smart robot vacuum with Wi-Fi connectivity.
+46,Beauty,Face Mask Pack,Refreshing face mask pack for glowing skin.
+47,Toys & Games,Art Supplies Kit,Complete art supplies kit for budding artists.
+48,Sports & Outdoors,Camping Tent,Spacious camping tent for outdoor adventures.
+49,Books,Biography,Inspiring biography of a famous personality.
+50,Electronics,Tablet,Sleek tablet with high-resolution display.
+51,Fashion,Sunglasses,Stylish sunglasses with UV protection.
+52,Home & Kitchen,Spice Rack,Rotating spice rack with 20 jars.
+53,Beauty,Body Lotion,Moisturizing body lotion with natural ingredients.
+54,Toys & Games,Science Kit,Fun and educational science kit for kids.
+55,Sports & Outdoors,Bicycle Helmet,Safety-certified bicycle helmet with adjustable fit.
+56,Books,Poetry Collection,Beautiful poetry collection from contemporary poets.
+57,Electronics,Smart Light Bulbs,Energy-efficient smart light bulbs with app control.
+58,Fashion,Fitness Leggings,Comfortable fitness leggings with a trendy design.
+59,Home & Kitchen,Cast Iron Skillet,Heavy-duty cast iron skillet for perfect searing.
+60,Beauty,Eyeliner Set,Waterproof eyeliner set in multiple shades.
+61,Toys & Games,Toy Train Set,Classic toy train set with tracks and accessories.
+62,Sports & Outdoors,Fitness Tracker,Advanced fitness tracker with heart rate monitor.
+63,Books,Thriller Novel,Page-turning thriller novel with unexpected twists.
+64,Electronics,Portable Charger,High-capacity portable charger for all devices.
+65,Fashion,Beanie Hat,Warm beanie hat in various colors and designs.
+66,Home & Kitchen,Electric Grill,Indoor electric grill for healthy grilling.
+67,Beauty,Shampoo and Conditioner,Nourishing shampoo and conditioner duo.
+68,Toys & Games,Plush Toy,Adorable plush toy for kids of all ages.
+69,Sports & Outdoors,Yoga Blocks,Supportive yoga blocks for all levels of practice.
+70,Books,Romance Novel,Heartwarming romance novel set in a charming town.
+71,Electronics,Smart Thermostat,Smart thermostat with energy-saving features.
+72,Fashion,Leather Boots,Stylish leather boots for any season.
+73,Home & Kitchen,Food Processor,Versatile food processor for easy meal prep.
+74,Beauty,Facial Cleanser,Gentle facial cleanser for all skin types.
+75,Toys & Games,Building Kit,Creative building kit for young engineers.
+76,Sports & Outdoors,Jump Rope,High-quality jump rope for cardio workouts.
+77,Books,Travel Guide,Comprehensive travel guide for exploring new places.
+78,Electronics,VR Headset,Immersive VR headset with interactive games.
+79,Fashion,Wool Sweater,Cozy wool sweater for chilly weather.
+80,Home & Kitchen,Knife Set,Professional knife set with wooden block.
+81,Beauty,Anti-Aging Serum,Effective anti-aging serum with vitamin C.
+82,Toys & Games,Stuffed Animal,Soft and cuddly stuffed animal for kids.
+83,Sports & Outdoors,Fishing Rod,Durable fishing rod for both beginners and pros.
+84,Books,Horror Story,Chilling horror story that keeps you up at night.
+85,Electronics,Home Theater System,High-quality home theater system with surround sound.
+86,Fashion,Maxi Dress,Elegant maxi dress for casual and formal events.
+87,Home & Kitchen,Bread Maker,Automatic bread maker with various settings.
+88,Beauty,Eye Shadow Palette,Vibrant eye shadow palette with multiple colors.
+89,Toys & Games,Remote Control Helicopter,Fun remote control helicopter for outdoor play.
+90,Sports & Outdoors,Golf Clubs,High-performance golf clubs for all skill levels.
+91,Books,Children? Storybook,Engaging children? storybook with colorful illustrations.
+92,Electronics,DSLR Camera,Professional DSLR camera with interchangeable lenses.
+93,Fashion,Silk Scarf,Luxurious silk scarf with intricate patterns.
+94,Home & Kitchen,Waffle Maker,Easy-to-use waffle maker with non-stick plates.
+95,Beauty,Bath Bombs,Relaxing bath bombs with essential oils.
+96,Toys & Games,Magic Kit,Entertaining magic kit for budding magicians.
+97,Sports & Outdoors,Tennis Racket,Lightweight tennis racket with superior grip.
+98,Books,Historical Drama,Compelling historical drama set in ancient times.
+99,Electronics,E-Reader,Compact e-reader with adjustable backlight.
+100,Fashion,Summer Dress,Light and airy summer dress with floral print.
+101,Home & Kitchen,Slow Cooker,Convenient slow cooker for delicious meals.
+102,Beauty,Hair Straightener,"Ceramic hair straightener for smooth, frizz-free hair."
+103,Toys & Games,Racing Car Set,Exciting racing car set with multiple tracks.
+104,Sports & Outdoors,Yoga Wheel,Versatile yoga wheel for stretching and balance.
+105,Books,Adventure Novel,Thrilling adventure novel with daring escapades.
+106,Electronics,Noise-Cancelling Headphones,High-quality noise-cancelling headphones for immersive sound.
+107,Fashion,Faux Fur Coat,Stylish faux fur coat for cold weather.
+108,Home & Kitchen,Espresso Machine,Professional espresso machine for coffee lovers.
+109,Beauty,Facial Roller,Refreshing facial roller for skincare routines.
+110,Toys & Games,Toy Kitchen Set,Realistic toy kitchen set for imaginative play.
+111,Sports & Outdoors,Kayak,Durable kayak for river and lake adventures.
+112,Books,Crime Thriller,Intense crime thriller with unexpected twists.
+113,Electronics,Wireless Keyboard,Ergonomic wireless keyboard with backlit keys.
+114,Fashion,Bomber Jacket,Trendy bomber jacket with a sleek design.
+115,Home & Kitchen,Wine Rack,Elegant wine rack with space for 12 bottles.
+116,Beauty,Makeup Remover,Gentle makeup remover for all skin types.
+117,Toys & Games,Board Game,Exciting board game for family and friends.
+118,Sports & Outdoors,Exercise Ball,Versatile exercise ball for various workouts.
+119,Books,Graphic Novel,Engaging graphic novel with stunning illustrations.
+120,Electronics,Portable Speaker,Compact portable speaker with excellent sound quality.
+121,Fashion,Leather Wallet,Classic leather wallet with multiple compartments.
+122,Home & Kitchen,Coffee Maker,Convenient coffee maker with programmable settings.
+123,Beauty,Lip Balm Set,Moisturizing lip balm set with natural ingredients.
+124,Toys & Games,Outdoor Playset,Fun outdoor playset with swings and slides.
+125,Sports & Outdoors,Ski Goggles,High-performance ski goggles with anti-fog coating.
+126,Books,Science Fiction,Captivating science fiction novel set in space.
+127,Electronics,Wireless Mouse,Ergonomic wireless mouse with long battery life.
+128,Fashion,Trench Coat,Classic trench coat with a modern touch.
+129,Home & Kitchen,Air Purifier,High-efficiency air purifier with HEPA filter.
+130,Beauty,Body Scrub,Exfoliating body scrub with natural ingredients.
+131,Toys & Games,LEGO Set,Creative LEGO set for building imaginative structures.
+132,Sports & Outdoors,Running Shorts,Lightweight running shorts with moisture-wicking fabric.
+133,Books,Detective Mystery,Intriguing detective mystery with clever twists.
