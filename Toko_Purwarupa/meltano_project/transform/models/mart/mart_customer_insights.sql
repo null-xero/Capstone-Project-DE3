@@ -6,4 +6,4 @@ select
     frr.return_rate
 from {{ ref('fact_reviews') }} fr
 join {{ ref('fact_return_rates') }} frr on fr.product_id = frr.product_id
-join {{ ref('stg_products') }} p on fr.product_id = p.product_id;
+join {{ ref('stg_products') }} p on fr.product_id = p.product_id

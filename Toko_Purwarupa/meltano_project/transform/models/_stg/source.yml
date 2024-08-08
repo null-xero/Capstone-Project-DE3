@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: sales_data
+  - name: dab_schema
     description: "Source data from the Excel sheets"
     tables:
       - name: orders
