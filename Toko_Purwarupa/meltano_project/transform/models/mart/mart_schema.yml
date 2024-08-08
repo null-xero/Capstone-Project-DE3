@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: mart_order_details
+    description: "All About Detail Orders for Marketing Department"
+    columns:
+      - name: order_detail_id
+        tests:
+          - not_null
+          - unique
+
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+      - name: order_date
+        tests:
+          - not_null
+
+      - name: unit_sales
+        tests:
+          - not_null
+
+
+  - name: mart_brand_product_sales
+    description: "Brand & Product Sales Info"
+    columns:
+      - name: total_qty
+        tests:
+          - not_null
+
+      - name: total_price
+        tests:
+          - not_null
+
+      - name: total_unit_sales
+        tests:
+          - not_null

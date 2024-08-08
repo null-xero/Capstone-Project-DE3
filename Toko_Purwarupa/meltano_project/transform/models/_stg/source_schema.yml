@@ -1,0 +1,81 @@
+version: 2
+
+sources:
+  - name: store
+    database: store
+    schema: public
+
+    tables:
+      - name: brands
+        columns:
+          - name: brand_id
+            description: "Unique identifier for each brand"
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: "Name of the brand"
+            tests:
+              - not_null
+
+      - name: products
+        columns:
+          - name: product_id
+            description: "Unique identifier for each product"
+            tests:
+              - unique
+              - not_null
+          - name: brand_id
+            description: "Foreign key referencing brands"
+            tests:
+              - relationships:
+                  to: source('store', 'brands')
+                  field: brand_id
+          - name: name
+            description: "Name of the product"
+            tests:
+              - not_null
+          - name: price
+            description: "Price of the product"
+            tests:
+              - not_null
+
+      - name: orders
+        columns:
+          - name: order_id
+            description: "Unique identifier for each order"
+            tests:
+              - unique
+              - not_null
+          - name: order_date
+            description: "Date and time the order was placed"
+            tests:
+              - not_null
+
+      - name: order_details
+        columns:
+          - name: order_detail_id
+            description: "Unique identifier for each order detail"
+            tests:
+              - unique
+              - not_null
+          - name: order_id
+            description: "Foreign key referencing orders"
+            tests:
+              - relationships:
+                  to: source('store', 'orders')
+                  field: order_id
+          - name: product_id
+            description: "Foreign key referencing products"
+            tests:
+              - relationships:
+                  to: source('store', 'products')
+                  field: product_id
+          - name: quantity
+            description: "Quantity of the product ordered"
+            tests:
+              - not_null
+          - name: price
+            description: "Price of the product in the order"
+            tests:
+              - not_null

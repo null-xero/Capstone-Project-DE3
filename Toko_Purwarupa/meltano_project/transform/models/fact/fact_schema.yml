@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fct_order_details
+    description: "All About Detail Orders"
+    columns:
+      - name: order_detail_id
+        tests:
+          - not_null
+          - unique
+
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+      - name: order_date
+        tests:
+          - not_null
+
+      - name: unit_sales
+        tests:
+          - not_null
+
+
+  - name: fct_brand_product_sales
+    description: "Brand & Product Sales"
+    columns:
+      - name: brand_id
+        tests:
+          - not_null
+
+      - name: product_id
+        tests:
+          - not_null
+          - unique

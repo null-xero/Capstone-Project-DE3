@@ -1,4 +1,27 @@
-TEST ASTRO PROJECT AND MELTANO
+1. Install Astro to local, CMD curl -sSL install.astronomer.io | sudo bash -s
+2. CMD astro dev init
+3. CMD astro dev start
+4. CMD pip install --upgrade pip
+5. CMD pip install "meltano" or pip install --upgrade "meltano"
+6. Making Environment Meltano : https://docs.meltano.com/concepts/environments/?meltano-tabs=env
+7. Install Extract [Extractor] for RAW Data : https://hub.meltano.com/extractors/tap-spreadsheets-anywhere
+8. Install Load [Loader] for Snowflake : https://hub.meltano.com/loaders/target-snowflake
+9. Install Transform [Utilities/Transformer] for DBT : https://hub.meltano.com/utilities/dbt-snowflake or https://docs.meltano.com/guide/transformation
+10. CMD meltano install
+10. Make .env
+```
+TARGET_POSTGRES_PASSWORD='postgres'
+TARGET_SNOWFLAKE_ACCOUNT='it51758.ap-southeast-3.aws'
+TARGET_SNOWFLAKE_USER='Ihsanr22'
+TARGET_SNOWFLAKE_PASSWORD='CapstoneProjectDE3'
+```
+11. Run DBT : meltano --environment=dev run tap-tap-spreadsheets-anywhere target-snowflake dbt-snowflake:run
+12. 
+
+
+
+
+<!-- TEST ASTRO PROJECT AND MELTANO
 ===
 
 ## 0. Docker
@@ -187,4 +210,4 @@ run_etl = BashOperator(
 
 ## 7. ---
 
-## 8. Continue...
+## 8. Continue... -->
