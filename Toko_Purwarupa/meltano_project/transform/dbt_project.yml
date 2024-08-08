@@ -26,21 +26,18 @@ models:
   my_meltano_project:
       # Config indicated by + and applies to all files under models/example/
     _stg:
-      +materialized: view
+      +materialized: table
       +schema: _stg
-      +database: store
+      +database: DATABROS_DATABASE
     _intermediate:
       +materialized: table
       +schema: _intermediate
-      +database: store
+      +database: DATABROS_DATABASE
     fact:
       +materialized: table
       +schema: fact
-      +database: store
+      +database: DATABROS_DATABASE
     mart:
       +materialized: table
       +schema: mart
-      +database: store
-    tests:
-      +schema: tests
-      +database: store
+      +database: DATABROS_DATABASE

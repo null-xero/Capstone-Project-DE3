@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: sales_data
+    description: "Source data from the Excel sheets"
+    tables:
+      - name: orders
+        description: "Order information including order status and timestamps"
+      - name: order_items
+        description: "Detailed items for each order"
+      - name: order_reviews
+        description: "Customer reviews of orders"
+      - name: order_payments
+        description: "Payments information for orders"
+      - name: returned_product
+        description: "Returned products data"
+      - name: products
+        description: "Product details and categories"
+      - name: customers
+        description: "Customer information"
+      - name: seller
+        description: "Seller details"

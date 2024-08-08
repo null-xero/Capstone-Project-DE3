@@ -1,36 +1,30 @@
 version: 2
 
 models:
-  - name: fct_order_details
-    description: "All About Detail Orders"
+  - name: fact_sales_by_product
+    description: "Fact table for sales metrics by product"
     columns:
-      - name: order_detail_id
-        tests:
-          - not_null
-          - unique
-
-      - name: order_id
-        tests:
-          - not_null
-          - unique
-
-      - name: order_date
-        tests:
-          - not_null
-
-      - name: unit_sales
-        tests:
-          - not_null
-
-
-  - name: fct_brand_product_sales
-    description: "Brand & Product Sales"
-    columns:
-      - name: brand_id
-        tests:
-          - not_null
-
       - name: product_id
-        tests:
-          - not_null
-          - unique
+        description: "Unique identifier for each product"
+      - name: total_sales
+        description: "Total sales amount for the product"
+      - name: avg_sales_per_period
+        description: "Average sales per period for the product"
+
+  - name: fact_reviews
+    description: "Fact table for customer review metrics"
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product"
+      - name: avg_rating
+        description: "Average rating for the product"
+      - name: total_reviews
+        description: "Total number of reviews for the product"
+
+  - name: fact_return_rates
+    description: "Fact table for return rates by product"
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product"
+      - name: return_rate
+        description: "Return rate for the product"

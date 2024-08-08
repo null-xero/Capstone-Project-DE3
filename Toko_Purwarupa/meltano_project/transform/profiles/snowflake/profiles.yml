@@ -1,41 +1,16 @@
-# Snowflake config reference: https://docs.getdbt.com/reference/warehouse-profiles/snowflake-profile
-#
-# Warning: Do not store credentials in this file unless you've take the necessary steps to remove
-# this file from your git commit.
 config:
-  send_anonymous_usage_stats: False
-  use_colors: True
+  send_anonymous_usage_stats: false
+  use_colors: true
 meltano:
-  target: "{{ env_var('MELTANO_ENVIRONMENT', 'dev') }}"  # The default profile name if no other profile is selected.
   outputs:
-    # TODO: Optionally, revise or add to these profiles to reflect your own environments. Meltano adds dev, staging and prod by default.
     dev:
+      account: it51758.ap-southeast-3.aws
+      database: DATABROS_DATABASE
+      password: CapstoneProjectDE3
+      role: DAB_ROLE
+      schema: DAB_SCHEMA
+      threads: 1
       type: snowflake
-      threads: 2
-      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
-      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
-      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
-      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
-      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
-    staging:
-      type: snowflake
-      threads: 4
-      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
-      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
-      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
-      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
-      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
-    prod:
-      type: snowflake
-      threads: 6
-      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
-      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
-      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
-      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
-      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
+      user: Ihsanr22
+      warehouse: DAB_WAREHOUSE
+  target: dev

@@ -1,39 +1,30 @@
 version: 2
 
 models:
-  - name: mart_order_details
-    description: "All About Detail Orders for Marketing Department"
+  - name: mart_sales_overview
+    description: "Sales overview mart for business intelligence"
     columns:
-      - name: order_detail_id
-        tests:
-          - not_null
-          - unique
+      - name: product_id
+        description: "Unique identifier for each product"
+      - name: product_category_name
+        description: "Category of the product"
+      - name: total_sales
+        description: "Total sales amount for the product"
+      - name: avg_sales_per_period
+        description: "Average sales per period for the product"
+      - name: avg_sales_growth
+        description: "Average sales growth for the product"
 
-      - name: order_id
-        tests:
-          - not_null
-          - unique
-
-      - name: order_date
-        tests:
-          - not_null
-
-      - name: unit_sales
-        tests:
-          - not_null
-
-
-  - name: mart_brand_product_sales
-    description: "Brand & Product Sales Info"
+  - name: mart_customer_insights
+    description: "Customer insights mart including reviews and return rates"
     columns:
-      - name: total_qty
-        tests:
-          - not_null
-
-      - name: total_price
-        tests:
-          - not_null
-
-      - name: total_unit_sales
-        tests:
-          - not_null
+      - name: product_id
+        description: "Unique identifier for each product"
+      - name: product_category_name
+        description: "Category of the product"
+      - name: avg_rating
+        description: "Average rating for the product"
+      - name: total_reviews
+        description: "Total number of reviews for the product"
+      - name: return_rate
+        description: "Return rate for the product"

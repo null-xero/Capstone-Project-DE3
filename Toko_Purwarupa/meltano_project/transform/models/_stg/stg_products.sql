@@ -1,6 +1,9 @@
-SELECT
-    product_id::int AS product_id
-    , brand_id::int AS brand_id
-    , name AS product_name
-    , price::float AS product_price
-FROM {{ source ('store', 'products') }}
+with source as (
+    select * from {{ ('source', 'products') }}
+)
+select
+    product_id,
+    product_category_name,
+    product_name,
+    product_description
+from source;

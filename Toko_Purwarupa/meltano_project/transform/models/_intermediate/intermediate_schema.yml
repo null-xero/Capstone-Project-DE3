@@ -1,23 +1,34 @@
 version: 2
 
 models:
-  - name: int_order_details
-    description: "All About Detail Orders"
+  - name: int_sales_aggregated
+    description: "Aggregated sales data by product and period"
     columns:
-      - name: order_detail_id
-        tests:
-          - not_null
-          - unique
+      - name: product_id
+        description: "Unique identifier for each product"
+      - name: total_sales
+        description: "Total sales amount for the product"
+      - name: avg_sales_per_period
+        description: "Average sales per period for the product"
+      - name: sales_growth
+        description: "Sales growth rate for the product"
 
-      - name: order_id
-        tests:
-          - not_null
-          - unique
+  - name: int_reviews_analysis
+    description: "Analysis of customer reviews"
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product"
+      - name: avg_rating
+        description: "Average rating for the product"
+      - name: total_reviews
+        description: "Total number of reviews for the product"
 
-      - name: order_date
-        tests:
-          - not_null
-
-      - name: unit_sales
-        tests:
-          - not_null
+  - name: int_sales_returns
+    description: "Sales and return data merged"
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product"
+      - name: total_returns
+        description: "Total number of returns for the product"
+      - name: return_rate
+        description: "Return rate for the product"

@@ -22,42 +22,39 @@ plugins:
     config:
       tables:
       - path: file://data/
-        name: order_payment_test
-        pattern: olist_order_payments_dataset.csv
+        name: returned_product
+        pattern: returned_product.json
         start_date: '2023-01-01T00:00:00Z'
         key_properties: [order_id]
-        format: csv
+        format: json
 
   loaders:
   - name: target-snowflake
     variant: meltanolabs
     pip_url: meltanolabs-target-snowflake
     config:
-      # account: MELTANO_ACCOUNT
-      # user: MELTANO_USER
-      # password: MELTANO_PASSWORD
-      database: MELTANO_DATABASE
-      warehouse: MELTANO_WAREHOUSE
-      role: MELTANO_ROLE
-      schema: MELTANO_SCHEMA
       add_record_metadata: true
       clean_up_batch_files: true
+      database: DATABROS_DATABASE
       hard_delete: false
       load_method: append-only
+      role: DAB_ROLE
+      schema: DAB_SCHEMA
       use_browser_authentication: false
       validate_records: true
+      warehouse: DAB_WAREHOUSE
 
   transformers:
   - name: dbt-snowflake
     variant: dbt-labs
     pip_url: dbt-core~=1.3.0 dbt-snowflake~=1.3.0
     config:
-      # account: ${TARGET_SNOWFLAKE_ACCOUNT}
-      # user: ${TARGET_SNOWFLAKE_USER}
-      # password: ${TARGET_SNOWFLAKE_PASSWORD}
-      # database: MELTANO_DATABASE
-      # warehouse: MELTANO_WAREHOUSE
-      # role: MELTANO_ROLE
-      # schema: MELTANO_SCHEMA
+      account: ${TARGET_SNOWFLAKE_ACCOUNT}
+      user: ${TARGET_SNOWFLAKE_USER}
+      password: ${TARGET_SNOWFLAKE_PASSWORD}
+      database: DATABROS_DATABASE
+      warehouse: DAB_WAREHOUSE
+      role: DAB_ROLE
+      schema: DAB_SCHEMA
       profiles_dir: $MELTANO_PROJECT_ROOT/transform/profiles/snowflake
       project_dir: $MELTANO_PROJECT_ROOT/transform

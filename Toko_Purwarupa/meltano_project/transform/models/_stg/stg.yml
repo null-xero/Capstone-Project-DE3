@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staging model for orders data"
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+      - name: customer_id
+        description: "Identifier for the customer who placed the order"
+      - name: order_status
+        description: "Current status of the order"
+      - name: order_purchase_timestamp
+        description: "Timestamp when the order was placed"
+
+  - name: stg_order_items
+    description: "Staging model for order items data"
+    columns:
+      - name: order_items_id
+        description: "Identifier for the order"
+      - name: product_id
+        description: "Identifier for the product"
+      - name: price
+        description: "Price of the product"
+
+  - name: stg_order_reviews
+    description: "Staging model for order reviews"
+    columns:
+      - name: order_review_id
+        description: "Unique identifier for each review"
+      - name: review_score
+        description: "Rating given by the customer"
+
+  - name: stg_order_payments
+    description: "Staging model for order payments"
+    columns:
+      - name: order_id
+        description: "Identifier for the order"
+      - name: payment_type
+        description: "Payment method used"
+
+  - name: stg_returned_product
+    description: "Staging model for returned products"
+    columns:
+      - name: order_returned_id
+        description: "Identifier for the returned product"
+      - name: returned_confirmation
+        description: "Identifier for the returned"
+
+  - name: stg_products
+    description: "Staging model for products"
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product"
+      - name: product_category_name
+        description: "Category of the product"
+
+  - name: stg_customers
+    description: "Staging model for customers"
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer"
+      - name: customer_city
+        description: "City where the customer is located"
+
+  - name: stg_seller
+    description: "Staging model for sellers"
+    columns:
+      - name: seller_id
+        description: "Unique identifier for each seller"
+      - name: seller_city
+        description: "City where the seller is located"
