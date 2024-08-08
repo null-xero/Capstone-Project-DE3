@@ -15,23 +15,6 @@ environments:
       schema: ${SNOWFLAKE_SCHEMA}
 plugins:
   extractors:
-  - name: tap-csv
-    variant: meltanolabs
-    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
-    config:
-      files:
-      - path: data/olist_products_dataset.csv
-        keys:
-        - product_id
-        entity: products
-  # - name: tap-smoke-test
-  #   variant: meltano
-  #   pip_url: git+https://github.com/meltano/tap-smoke-test.git
-  #   config:
-  #     streams:
-  #     - stream_name: animals
-  #       input_filename: 
-  #         https://raw.githubusercontent.com/meltano/tap-smoke-test/main/demo-data/animals-data.jsonl
   - name: tap-spreadsheets-anywhere
     namespace: tap_spreadsheets_anywhere
     variant: ets
@@ -39,7 +22,7 @@ plugins:
     config:
       tables:
       - path: file://data/
-        name: order_payment
+        name: order_payment_test
         pattern: olist_order_payments_dataset.csv
         start_date: '2023-01-01T00:00:00Z'
         key_properties: [order_id]
@@ -63,14 +46,6 @@ plugins:
       load_method: append-only
       use_browser_authentication: false
       validate_records: true
-  # - name: target-postgres
-  #   variant: meltanolabs
-  #   pip_url: meltanolabs-target-postgres
-  #   config:
-  #     host: localhost
-  #     port: 5432
-  #     dbname: meltano_postgres_db
-  #     user: postgres
 
   transformers:
   - name: dbt-snowflake
@@ -86,8 +61,3 @@ plugins:
       # schema: MELTANO_SCHEMA
       profiles_dir: $MELTANO_PROJECT_ROOT/transform/profiles/snowflake
       project_dir: $MELTANO_PROJECT_ROOT/transform
-
-  # utilities:
-  # - name: dbt-snowflake
-  #   variant: dbt-labs
-  #   pip_url: dbt-core dbt-snowflake git+https://github.com/meltano/dbt-ext.git@main

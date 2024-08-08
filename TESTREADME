@@ -10,12 +10,21 @@
 10. CMD meltano install
 10. Make .env
 ```
-TARGET_POSTGRES_PASSWORD='postgres'
-TARGET_SNOWFLAKE_ACCOUNT='it51758.ap-southeast-3.aws'
-TARGET_SNOWFLAKE_USER='Ihsanr22'
-TARGET_SNOWFLAKE_PASSWORD='CapstoneProjectDE3'
+MELTANO_ENVIRONMENT='environment_meltano'
+
+TARGET_SNOWFLAKE_ACCOUNT='Account Snowflake'
+TARGET_SNOWFLAKE_USER='User Snowflake'
+TARGET_SNOWFLAKE_PASSWORD='Password Snowflake'
+
+DBT_SNOWFLAKE_ACCOUNT='Account Snowflake'
+DBT_SNOWFLAKE_USER='User Snowflake'
+DBT_SNOWFLAKE_PASSWORD='Password Snowflake'
+DBT_SNOWFLAKE_ROLE='MELTANO_ROLE'
+DBT_SNOWFLAKE_WAREHOUSE='MELTANO_WAREHOUSE'
+DBT_SNOWFLAKE_DATABASE='MELTANO_DATABASE'
+DBT_SNOWFLAKE_SCHEMA='MELTANO_DBT_SCHEMA'
 ```
-11. Run DBT : meltano --environment=dev run tap-tap-spreadsheets-anywhere target-snowflake dbt-snowflake:run
+11. Run DBT : meltano --environment=dev run tap-spreadsheets-anywhere target-snowflake dbt-snowflake:run
 12. 
 
 
