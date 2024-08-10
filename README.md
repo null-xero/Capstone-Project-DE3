@@ -3,6 +3,11 @@
 E-Purwarupa is a company that sells various kinds of products. In its business process, E-Purwarupa uses a website as the main buying and selling instrument. The website contains multiple types of buying and selling data such as user activity, product transactions, and user behavior.
 E-Purwarupa seeks to develop analysis based on data-driven decisions for inventory and promotion.
 
+# Project Scope
+
+Challenges: Extract, transform, and load data from multiple sources to analyze product performance.
+Key Metrics: Total sales, average sales per period, sales growth, and return rates.
+
 ## Table of Contents
 
 - [Installation](#installation)
