@@ -22,11 +22,11 @@ plugins:
     config:
       tables:
       - path: file://data/
-        name: orders
-        pattern: orders.csv
+        name: returned_product
+        pattern: returned_product.json
         start_date: '2023-01-01T00:00:00Z'
-        key_properties: [order_id]
-        format: csv
+        key_properties: [order_returned_id]
+        format: json
 
   loaders:
   - name: target-snowflake

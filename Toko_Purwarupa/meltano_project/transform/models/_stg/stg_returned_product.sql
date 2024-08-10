@@ -3,5 +3,5 @@ with source as (
 )
 select
     order_returned_id,
-    returned_confirmation
+    returned_confirmation::boolean as returned_confirmation
 from source
