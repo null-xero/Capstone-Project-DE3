@@ -1,9 +1,7 @@
-Here's the updated `README.md` with the additional steps for configuring and running DBT:
+# Project Overview
 
-```markdown
-# Project Title
-
-Welcome to the [Your Project Name] repository! This project aims to build a comprehensive data analytics pipeline using Astro and Meltano, integrating various data sources and tools to streamline the ETL/ELT processes.
+E-Purwarupa is a company that sells various kinds of products. In its business process, E-Purwarupa uses a website as the main buying and selling instrument. The website contains multiple types of buying and selling data such as user activity, product transactions, and user behavior.
+E-Purwarupa seeks to develop analysis based on data-driven decisions for inventory and promotion.
 
 ## Table of Contents
 
