@@ -10,6 +10,7 @@ Key Metrics: Total sales, average sales per period, sales growth, and return rat
 
 ## Table of Contents
 
+- [Dataset](#dataset)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Pipeline Upgrade](#pipeline-upgrade)
@@ -19,6 +20,27 @@ Key Metrics: Total sales, average sales per period, sales growth, and return rat
 - [Running the Project](#running-the-project)
 - [Environment Variables](#environment-variables)
 - [Resources](#resources)
+
+## Dataset
+
+- Orders.csv | [Download file](https://drive.usercontent.google.com/download?id=1jvrGq2XSvJSraxTv0hFoCTJ5FGKNv6AH&export=download&authuser=0&confirm=t&uuid=ac62e281-2096-4a1d-ad68-2c62095f8d86&at=APZUnTVxcC2oizHRnBMYgGQ0Q7K4:1723376085808)
+- Order_items.csv | [Download file](https://drive.usercontent.google.com/download?id=1S12qShi_1scqyTmvfMGhzW8bvDU-M_NR&export=download&authuser=0&confirm=t&uuid=bc265abe-4649-406c-8232-5c477fcb0af6&at=APZUnTVAVdAt2jPneNIJP3cyTVsn:1723375639127)
+- Order_payments.csv | [Download file](https://drive.usercontent.google.com/download?id=1NScINOTa5-OfRX9EYm6K8whYUxN38jEs&export=download&authuser=0&confirm=t&uuid=5a9232a4-db5d-4778-a10e-2ded7e5b61f5&at=APZUnTXKZSEH6lW_l_OGReZNU3pQ:1723376387522)
+- Order_reviews.csv | [Download file](https://drive.usercontent.google.com/download?id=11ogKsU3vz5DuQ7WXE4KvNh7Q_g05LGaN&export=download&authuser=0&confirm=t&uuid=af5ba6fd-9152-4c7e-ab51-910ed78b5db4&at=APZUnTV3R2RxsouxHwgCOyZagfRp:1723376404965)
+- Products.csv | [Download file](https://drive.usercontent.google.com/download?id=1UDUSPUYZ_Aj8gEEPEFNzKj_Q4ovq_-e4&export=download&authuser=0&confirm=t&uuid=fd39201a-19bc-4114-8c10-f1b01e4d4448&at=APZUnTX6xKVz3-xAzmpH0H3iDa6f:1723376345392)
+- Sellers.csv | [Download file](https://drive.usercontent.google.com/download?id=1ggsGSE2bU_bt-0qR3EiUVPfWwTZXq-s5&export=download&authuser=0&confirm=t&uuid=073b98d6-c64b-428e-b1cb-15267f26ebaa&at=APZUnTVVVIEfc9ImP23w3ZpuAipx:1723376367708)
+- Costumers.csv | [Download file](https://drive.usercontent.google.com/download?id=1l1aeM5wXErCwwjvuxFlg50CMaVvA6G2v&export=download&authuser=0&confirm=t&uuid=d14efb1d-44c1-4d62-bfe7-4c16d0b8161a&at=APZUnTWr8U4iyXnpH8Fq9sMF-n3-:1723375415963)
+- Returned_products.json | [Download file](https://drive.usercontent.google.com/download?id=1Zl4Qv7TUo8Ffd4NwvVLQV5bN6E044tGj&export=download&authuser=0&confirm=t&uuid=3600c414-1fa0-4f49-a213-dce0e8450d63&at=APZUnTXju0aM-f5OAtDnHK1wTd25:1723376442261)
+
+You can Download Dataset or check this Repository in `path: E-Purwarupa/meltano_porject/data/`
+
+## Data Pipeline Design
+
+![ELT_Data_Architecture](https://github.com/null-Xero/Capstone-Project-DE3/blob/MasterNull/E-Purwarupa/.assets/ELT_Data_Architecture.png)
+
+## Entity Relationship Diagram
+
+![ERD](https://github.com/null-Xero/Capstone-Project-DE3/blob/MasterNull/E-Purwarupa/.assets/Entity_Relationship_Diagram.png)
 
 ## Installation
 
