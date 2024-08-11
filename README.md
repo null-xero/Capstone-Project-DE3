@@ -16,7 +16,6 @@ Key Metrics: Total sales, average sales per period, sales growth, and return rat
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
-- [Pipeline Upgrade](#pipeline-upgrade)
 - [Meltano Setup](#meltano-setup)
 - [Environment Configuration](#environment-configuration)
 - [Extract, Load, and Transform](#extract-load-and-transform)
@@ -37,7 +36,6 @@ Key Metrics: Total sales, average sales per period, sales growth, and return rat
 
 You can Download Dataset or check this Repository in `path: E-Purwarupa/meltano_porject/data/`
 
-
 ## Tools Used
 
 1. CSV (Data Source 1)
@@ -51,11 +49,11 @@ You can Download Dataset or check this Repository in `path: E-Purwarupa/meltano_
 
 ## Data Pipeline Design
 
-![ELT_Data_Architecture](./img/ELT_Data_Architecture.png)
+![ELT_Data_Architecture](./E-Purwarupa/img/ELT_Data_Architecture.png)
 
 ## Entity Relationship Diagram
 
-![ERD](./img/Entity_Relationship_Diagram.png)
+![ERD](./E-Purwarupa/img/Entity_Relationship_Diagram.png)
 
 ## Installation
 
@@ -65,6 +63,14 @@ To install Astro locally, run the following command:
 
 ```bash
 curl -sSL install.astronomer.io | sudo bash -s
+```
+
+### Pipeline Upgrade
+
+Ensure your pipeline tools are up-to-date by upgrading `pip`:
+
+```bash
+pip install --upgrade pip
 ```
 
 ### Meltano Installation
@@ -102,13 +108,9 @@ Start Astro by running:
 astro dev start
 ```
 
-## Pipeline Upgrade
-
-Ensure your pipeline tools are up-to-date by upgrading `pip`:
-
-```bash
-pip install --upgrade pip
-```
+### Login Airflow
+- Username : `admin`
+- Password : `admin`
 
 ## Meltano Setup
 
@@ -189,4 +191,3 @@ meltano --environment=dev run tap-spreadsheets-anywhere target-snowflake dbt-sno
 - [Snowflake Documentation](https://docs.snowflake.com/)
 
 Feel free to explore and modify this template to fit your project's needs. Happy coding!
-```
