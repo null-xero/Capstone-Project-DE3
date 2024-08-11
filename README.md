@@ -11,6 +11,9 @@ Key Metrics: Total sales, average sales per period, sales growth, and return rat
 ## Table of Contents
 
 - [Dataset](#dataset)
+- [Tools Used](#tools-used)
+- [Data Pipeline Design](#data-pipeline-design)
+- [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Pipeline Upgrade](#pipeline-upgrade)
@@ -34,13 +37,25 @@ Key Metrics: Total sales, average sales per period, sales growth, and return rat
 
 You can Download Dataset or check this Repository in `path: E-Purwarupa/meltano_porject/data/`
 
+
+## Tools Used
+
+1. CSV (Data Source 1)
+2. JSON (Data Source 2)
+3. Meltano (ELT)
+    - Plugin Meltano `tap-spreadsheets-anywhere` [Extract]
+    - Plugin Meltano `target-snowflake` [Load]
+    - DBT-Snowflake [Transform]
+4. Snowflake [Data Warehouse]
+5. Airflow [Orchestration]
+
 ## Data Pipeline Design
 
-![ELT_Data_Architecture](https://github.com/null-Xero/Capstone-Project-DE3/blob/MasterNull/E-Purwarupa/.assets/ELT_Data_Architecture.png)
+![ELT_Data_Architecture](./img/ELT_Data_Architecture.png)
 
 ## Entity Relationship Diagram
 
-![ERD](https://github.com/null-Xero/Capstone-Project-DE3/blob/MasterNull/E-Purwarupa/.assets/Entity_Relationship_Diagram.png)
+![ERD](./img/Entity_Relationship_Diagram.png)
 
 ## Installation
 
@@ -53,6 +68,13 @@ curl -sSL install.astronomer.io | sudo bash -s
 ```
 
 ### Meltano Installation
+
+Create `.venv`
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
 To install Meltano, you can use one of the following commands:
 
@@ -168,5 +190,3 @@ meltano --environment=dev run tap-spreadsheets-anywhere target-snowflake dbt-sno
 
 Feel free to explore and modify this template to fit your project's needs. Happy coding!
 ```
-
-This updated `README.md` now includes the necessary steps and configuration details to set up and run DBT with Meltano. Let me know if you need any more changes!
