@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source ('dab_schema', 'returned_product') }}
+    select * from {{ source ('dab_schema', 'returned_products') }}
 )
 select
     order_returned_id,

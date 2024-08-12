@@ -12,8 +12,9 @@ Key Metrics: Total sales, average sales per period, sales growth, and return rat
 
 - [Dataset](#dataset)
 - [Tools Used](#tools-used)
-- [Data Pipeline Design](#data-pipeline-design)
+- [Virtual Environment and Pipeline Upgrade](#virtual-environment-and-pipeline-upgrade)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
+- [Clone Repo](#clone-this-repository)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Meltano Setup](#meltano-setup)
@@ -55,7 +56,22 @@ You can Download Dataset or check this Repository in `path: E-Purwarupa/meltano_
 
 ![ERD](./E-Purwarupa/img/Entity_Relationship_Diagram.png)
 
+## Clone This Repository
+
+```bash
+git clone https://github.com/null-xero/Capstone-Project-DE3.git
+```
+
 ## Installation
+
+### Check Python
+
+```bash
+python3 --version
+```
+
+- Recommendation Python Version 3.9 | ex. `3.9.10`
+- if your python version is too new, it will affect dbt-snowflake [Maybe dbt-snowflake won't work]
 
 ### Astro Installation
 
@@ -65,7 +81,14 @@ To install Astro locally, run the following command:
 curl -sSL install.astronomer.io | sudo bash -s
 ```
 
-### Pipeline Upgrade
+### Virtual Environment and Pipeline Upgrade
+
+Create `.venv`
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
 Ensure your pipeline tools are up-to-date by upgrading `pip`:
 
@@ -74,13 +97,6 @@ pip install --upgrade pip
 ```
 
 ### Meltano Installation
-
-Create `.venv`
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
 
 To install Meltano, you can use one of the following commands:
 
@@ -96,11 +112,11 @@ pip install --upgrade "meltano"
 
 ### Initialize Astro
 
-Initialize your Astro project with the following command:
+<!-- Initialize your Astro project with the following command:
 
 ```bash
 astro dev init
-```
+``` -->
 
 Start Astro by running:
 
@@ -126,21 +142,45 @@ Refer to the Meltano documentation to create and manage environments:
 
 Install the necessary extractor for your raw data. For example, using the tap-spreadsheets-anywhere extractor:
 
-[Extractor Documentation](https://hub.meltano.com/extractors/tap-spreadsheets-anywhere)
+```bash
+meltano add extractor tap-spreadsheets-anywhere
+```
+
+[Check for Extractor Documentation](https://hub.meltano.com/extractors/tap-spreadsheets-anywhere)
 
 ### Install Loader for Snowflake
 
 Set up the loader for Snowflake to transfer data:
 
-[Loader Documentation](https://hub.meltano.com/loaders/target-snowflake)
+```bash
+meltano add loader target-snowflake
+```
+
+and
+
+```bash
+meltano invoke target-snowflake --initialize
+```
+
+Check:
+
+```bash
+meltano config target-snowflake
+```
+
+[Check for Loader Documentation](https://hub.meltano.com/loaders/target-snowflake)
 
 ### Install Transformer for DBT
 
 Set up the DBT transformer for your data transformations:
 
-[Transformer Documentation for DBT Snowflake](https://hub.meltano.com/utilities/dbt-snowflake)
+```bash
+meltano add transformer dbt-snowflake
+```
 
-[Transformer Guide](https://docs.meltano.com/guide/transformation)
+[Transformer Guide Documentation DBT Snowflake](https://docs.meltano.com/guide/transformation) `[this is what we use]`
+
+[Utilities for Documentation DBT Snowflake](https://hub.meltano.com/utilities/dbt-snowflake)
 
 ### Install Meltano Plugins
 
@@ -168,10 +208,6 @@ TARGET_SNOWFLAKE_PASSWORD='Password Snowflake'
 DBT_SNOWFLAKE_ACCOUNT='Account Snowflake'
 DBT_SNOWFLAKE_USER='User Snowflake'
 DBT_SNOWFLAKE_PASSWORD='Password Snowflake'
-DBT_SNOWFLAKE_ROLE='MELTANO_ROLE'
-DBT_SNOWFLAKE_WAREHOUSE='MELTANO_WAREHOUSE'
-DBT_SNOWFLAKE_DATABASE='MELTANO_DATABASE'
-DBT_SNOWFLAKE_SCHEMA='MELTANO_DBT_SCHEMA'
 ```
 
 ## Running the Project

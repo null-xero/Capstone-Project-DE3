@@ -12,11 +12,11 @@ sources:
         description: "Customer reviews of orders"
       - name: order_payments
         description: "Payments information for orders"
-      - name: returned_product
+      - name: returned_products
         description: "Returned products data"
       - name: products
         description: "Product details and categories"
       - name: customers
         description: "Customer information"
-      - name: seller
+      - name: sellers
         description: "Seller details"

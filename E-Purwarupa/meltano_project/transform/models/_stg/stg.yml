@@ -39,7 +39,7 @@ models:
       - name: payment_type
         description: "Payment method used"
 
-  - name: stg_returned_product
+  - name: stg_returned_products
     description: "Staging model for returned products"
     columns:
       - name: order_returned_id
@@ -63,7 +63,7 @@ models:
       - name: customer_city
         description: "City where the customer is located"
 
-  - name: stg_seller
+  - name: stg_sellers
     description: "Staging model for sellers"
     columns:
       - name: seller_id

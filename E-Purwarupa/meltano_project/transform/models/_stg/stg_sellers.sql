@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source ('dab_schema', 'seller') }}
+    select * from {{ source ('dab_schema', 'sellers') }}
 )
 select
     seller_id,
