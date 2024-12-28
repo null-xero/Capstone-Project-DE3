@@ -214,6 +214,12 @@ DBT_SNOWFLAKE_PASSWORD='Password Snowflake'
 
 After setting up your environment and installing the necessary plugins, you can start running your data pipeline and analytics processes.
 
+To run the pipeline for Ingestion Data, execute the following command:
+
+```bash
+meltano --environment=dev run tap-spreadsheets-anywhere target-snowflake
+```
+
 To run the pipeline using DBT, execute the following command:
 
 ```bash
